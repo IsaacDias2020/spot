@@ -23,7 +23,6 @@ use std::time::{Duration, SystemTime};
 
 use super::Command;
 use crate::app::credentials;
-use crate::app::state::Device;
 use crate::settings::SpotSettings;
 
 #[derive(Debug)]
@@ -107,7 +106,7 @@ impl SpotifyPlayer {
             player: None,
             session: None,
             delegate,
-            device: Device::Connect,
+            device: Device::Local,
         }
     }
 
@@ -126,19 +125,11 @@ impl SpotifyPlayer {
                     .play();
                 Ok(())
             }
-            (Device::Connect, Command::PlayerResume) => {
-                self.api.player_play(None).await.unwrap();
-                Ok(())
-            }
             (Device::Local, Command::PlayerPause)) => {
                 self.player
                     .as_ref()
                     .ok_or(SpotifyError::PlayerNotReady)?
                     .pause();
-                Ok(())
-            }
-            (Device::Connect, Command::PlayerPause) => {
-                self.api.player_pause().await.unwrap();
                 Ok(())
             }
             (Device::Local, Command::PlayerStop)) => {
@@ -155,20 +146,11 @@ impl SpotifyPlayer {
                     .seek(position);
                 Ok(())
             }
-            (Device::Connect, Command::PlayerSeek(position)) => {
-                self.api.player_seek(position as usize).await.unwrap();
-                Ok(())
-            }
             (Device::Local, Command::PlayerLoad { track, resume }) => {
                 self.player
                     .as_mut()
                     .ok_or(SpotifyError::PlayerNotReady)?
                     .load(track, resume, 0);
-                Ok(())
-            }
-            (Device::Connect, Command::PlayerLoad(track)) => {
-                let uri = track.to_uri();
-                self.api.player_play(Some(uri)).await.unwrap();
                 Ok(())
             }
             (Device::Local, Command::PlayerPreload(track)) => {
@@ -178,22 +160,6 @@ impl SpotifyPlayer {
                     .preload(track);
                 Ok(())
             }
-            (Device::Local, Command::SwitchDevice(Device::Local)) => Ok(()),
-            (Device::Local, Command::SwitchDevice(Device::Connect)) => {
-                let player = player.as_mut().ok_or(SpotifyError::PlayerNotReady)?;
-                player.pause();
-                *self.device.borrow_mut() = Device::Connect;
-                self.api.player_play(None).await.unwrap();
-                Ok(())
-            }
-            (Device::Connect, Command::SwitchDevice(Device::Local)) => {
-                let player = player.as_ref().ok_or(SpotifyError::PlayerNotReady)?;
-                self.api.player_pause().await.unwrap();
-                *self.device.borrow_mut() = Device::Local;
-                player.play();
-                Ok(())
-            }
-            (Device::Connect, Command::SwitchDevice(Device::Connect)) => Ok(()),
             (_, Command::RefreshToken) => {
                 let session = self.session.as_ref().ok_or(SpotifyError::PlayerNotReady)?;
                 let (token, token_expiry_time) = get_access_token_and_expiry_time(session).await?;
