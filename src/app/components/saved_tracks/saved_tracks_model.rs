@@ -30,7 +30,7 @@ impl SavedTracksModel {
         };
         self.dispatcher.dispatch_async(Box::pin(async move {
             let action = loader
-                .query(query, |song_batch| {
+                .query(query, |_s, song_batch| {
                     BrowserAction::SetSavedTracks(Box::new(song_batch)).into()
                 })
                 .await;
@@ -47,7 +47,7 @@ impl SavedTracksModel {
         };
         self.dispatcher.dispatch_async(Box::pin(async move {
             let action = loader
-                .query(query, |song_batch| {
+                .query(query, |_s, song_batch| {
                     BrowserAction::AppendSavedTracks(Box::new(song_batch)).into()
                 })
                 .await;

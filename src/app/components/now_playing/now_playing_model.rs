@@ -38,9 +38,8 @@ impl NowPlayingModel {
         debug!("next_query = {:?}", &query);
 
         self.dispatcher.dispatch_async(Box::pin(async move {
-            let source = query.source.clone();
             let action = loader
-                .query(query, |song_batch| {
+                .query(query, |source, song_batch| {
                     PlaybackAction::LoadPagedSongs(source, song_batch).into()
                 })
                 .await;
