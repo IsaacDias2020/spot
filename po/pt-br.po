@@ -140,11 +140,11 @@ msgstr ""
 
 #: src/app/components/playback/playback_controls.rs:64
 msgid "Pause"
-msgstr ""
+msgstr "Pausa"
 
 #: src/app/components/playback/playback_controls.rs:66
 msgid "Play"
-msgstr ""
+msgstr "Tocar"
 
 #: src/app/components/playback/playback_controls.blp:15
 msgid "Shuffle"
@@ -152,30 +152,30 @@ msgstr ""
 
 #: src/app/components/playback/playback_controls.blp:24
 msgid "Previous"
-msgstr ""
+msgstr "Anterior"
 
 #: src/app/components/playback/playback_controls.blp:46
 msgid "Next"
-msgstr ""
+msgstr "Próximo"
 
 #: src/app/components/playback/playback_controls.blp:55
 msgid "Repeat"
-msgstr ""
+msgstr "Repetir"
 
 #. A title that is shown when the user has not saved any playlists.
 #: src/app/components/saved_playlists/saved_playlists.blp:26
 msgid "You have no saved playlists."
-msgstr ""
+msgstr "Voce não tem playlist salva"
 
 #. A description of what happens when the user has saved playlists.
 #: src/app/components/saved_playlists/saved_playlists.blp:30
 msgid "Your playlists will be shown here."
-msgstr ""
+msgstr "Sua playlist será mostrada aqui"
 
 #. A title that is shown when the user has not saved any albums.
 #: src/app/components/library/library.blp:25
 msgid "You have no saved albums."
-msgstr ""
+msgstr "Você não tem álbuns salvos"
 
 #. A description of what happens when the user has saved albums.
 #: src/app/components/library/library.blp:29
