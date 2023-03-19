@@ -140,11 +140,11 @@ msgstr ""
 
 #: src/app/components/playback/playback_controls.rs:64
 msgid "Pause"
-msgstr ""
+msgstr "Pausar"
 
 #: src/app/components/playback/playback_controls.rs:66
 msgid "Play"
-msgstr ""
+msgstr "Tocar"
 
 #: src/app/components/playback/playback_controls.blp:15
 msgid "Shuffle"
@@ -152,30 +152,30 @@ msgstr ""
 
 #: src/app/components/playback/playback_controls.blp:24
 msgid "Previous"
-msgstr ""
+msgstr "Anterior"
 
 #: src/app/components/playback/playback_controls.blp:46
 msgid "Next"
-msgstr ""
+msgstr "Próximo"
 
 #: src/app/components/playback/playback_controls.blp:55
 msgid "Repeat"
-msgstr ""
+msgstr "Repetir"
 
 #. A title that is shown when the user has not saved any playlists.
 #: src/app/components/saved_playlists/saved_playlists.blp:26
 msgid "You have no saved playlists."
-msgstr ""
+msgstr "Você não tem playlists salvas"
 
 #. A description of what happens when the user has saved playlists.
 #: src/app/components/saved_playlists/saved_playlists.blp:30
 msgid "Your playlists will be shown here."
-msgstr ""
+msgstr "Sua playlist seŕa mostrada aqui"
 
 #. A title that is shown when the user has not saved any albums.
 #: src/app/components/library/library.blp:25
 msgid "You have no saved albums."
-msgstr ""
+msgstr "Você deve selecionar álbuns"
 
 #. A description of what happens when the user has saved albums.
 #: src/app/components/library/library.blp:29
@@ -192,7 +192,7 @@ msgstr[1] "{} músicas selecionadas"
 #. Title for the empty search page (initial state).
 #: src/app/components/search/search.blp:110
 msgid "Search Spotify."
-msgstr ""
+msgstr "Buscar Spotify"
 
 #. Subtitle for the empty search page (initial state).
 #: src/app/components/search/search.blp:114
@@ -201,23 +201,23 @@ msgstr ""
 
 #: src/app/components/selection/selection_toolbar.blp:61
 msgid "Remove"
-msgstr ""
+msgstr "Remover"
 
 #. <property name="icon-name">playlist2-symbolic</property>
 #: src/app/components/selection/selection_toolbar.blp:49
 msgid "Add to playlist..."
-msgstr ""
+msgstr "Adicionar à playlist"
 
 #. Button label. Exits selection mode.
 #: src/app/components/playlist_details/playlist_headerbar.blp:53
 #: src/app/components/headerbar/headerbar.blp:49
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #. Button label. Selects all visible songs.
 #: src/app/components/headerbar/headerbar.blp:63
 msgid "Select all"
-msgstr ""
+msgstr "Selecionar tudp"
 
 #. translators: This is part of a contextual menu attached to a single track; the full text is "More from <artist>".
 #: src/app/components/labels.rs:39
@@ -255,12 +255,12 @@ msgstr ""
 
 #: src/app/components/sidebar/sidebar.rs:49
 msgid "Unnamed playlist"
-msgstr ""
+msgstr "Playlist sem nome"
 
 #. translators: This is a sidebar entry to browse to saved playlists.
 #: src/app/components/sidebar/sidebar_item.rs:81
 msgid "All Playlists"
-msgstr ""
+msgstr "Todas as playlists"
 
 #: src/app/components/selection/component.rs:66
 msgid "Tracks saved!"
@@ -269,7 +269,7 @@ msgstr ""
 #. translators: This is a menu entry.
 #: src/app/components/user_menu/user_menu.rs:65
 msgid "Preferences"
-msgstr ""
+msgstr "Preferências"
 
 #: src/main.rs:75
 msgid "Failed to open link!"
@@ -278,7 +278,7 @@ msgstr ""
 #. Header for a group of preference items regarding audio
 #: src/app/components/settings/settings.blp:13
 msgid "Audio"
-msgstr ""
+msgstr "Áudio"
 
 #. Title for an item in preferences
 #: src/app/components/settings/settings.blp:18
@@ -288,7 +288,7 @@ msgstr ""
 #. Title for an item in preferences
 #: src/app/components/settings/settings.blp:30
 msgid "ALSA Device"
-msgstr ""
+msgstr "Dispositivo ALSA"
 
 #. Description for the item (ALSA Device) in preferences
 #: src/app/components/settings/settings.blp:34
@@ -298,42 +298,42 @@ msgstr ""
 #. Title for an item in preferences
 #: src/app/components/settings/settings.blp:44
 msgid "Audio Quality"
-msgstr ""
+msgstr "Qualidade de áudio"
 
 #: src/app/components/settings/settings.blp:47
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: src/app/components/settings/settings.blp:48
 msgid "High"
-msgstr ""
+msgstr "Alto"
 
 #: src/app/components/settings/settings.blp:49
 msgid "Very high"
-msgstr ""
+msgstr "Muito alto"
 
 #. Header for a group of preference items regarding the application's appearance
 #: src/app/components/settings/settings.blp:72
 msgid "Appearance"
-msgstr ""
+msgstr "Aparência"
 
 #. Title for an item in preferences
 #: src/app/components/settings/settings.blp:77
 msgid "Theme"
-msgstr ""
+msgstr "Tema"
 
 #: src/app/components/settings/settings.blp:80
 msgid "Light"
-msgstr ""
+msgstr "Claro"
 
 #: src/app/components/settings/settings.blp:81
 msgid "Dark"
-msgstr ""
+msgstr "Escuro"
 
 #. Header for a group of preference items regarding network
 #: src/app/components/settings/settings.blp:91
 msgid "Network"
-msgstr ""
+msgstr "Rede"
 
 #. Title for an item in preferences
 #: src/app/components/settings/settings.blp:96
@@ -361,7 +361,7 @@ msgstr ""
 
 #: src/app/components/sidebar/sidebar_item.rs:90
 msgid "New Playlist"
-msgstr ""
+msgstr "Nova playlist"
 
 #. Title for an item in preferences
 #: src/app/components/settings/settings.blp:57
@@ -370,20 +370,20 @@ msgstr ""
 
 #: src/app/components/settings/settings.blp:82
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 #. Finish playlist edition
 #: src/app/components/playlist_details/playlist_headerbar.blp:69
 msgid "Done"
-msgstr ""
+msgstr "Feito"
 
 #. label for the entry containing the name of a new playlist
 #: src/app/components/sidebar/create_playlist.blp:10
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #. Button that creates a new playlist
 #: src/app/components/sidebar/create_playlist.blp:30
 msgid "Create"
-msgstr ""
+msgstr "Criar"
 
